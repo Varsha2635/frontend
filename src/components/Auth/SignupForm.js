@@ -54,7 +54,7 @@ const SignupForm = () => {
       return;
     }
     try {
-      await axios.post('/send-otp', { email: formData.email });
+      await axios.post('/api/v1/send-otp', { email: formData.email });
       setMessage("OTP sent to your email");
       setStep(2);
     } catch (err) {
